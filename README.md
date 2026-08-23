@@ -124,25 +124,6 @@ SwitchMakroTerminal/
 
 ---
 
-## API keys, security & quota
-
-**Provide your own API Keys** The Trading Economics key is read at
-runtime from `sdmc:/te_apikey.txt` on each user's own SD card — it is never compiled
-into the `.nro`. Every user brings
-their **own** key; TE keys are per-account and must not be shared or embedded. Without a
-key the app simply shows the sample INDOGB curve, so it works for everyone out of the box (we are working on using alternative data sources such as FRED).
-
-**API-quota friendliness (already built in):**
-- Yields (Trading Economics) refresh on a slow timer — `yields_refresh_seconds`,
-  default **900s (15 min)**. Bond yields move slowly; there's no reason to poll faster.
-- All tenors are fetched in **one batched request** (comma-separated symbols), not one
-  call per tenor.
-- The 1-month / 1-year history is **cached ~6 hours**, so a routine refresh costs about
-  **one** API call, not sixteen. Startup costs two (current + history).
-- Overview/stocks (Yahoo, no key) refresh on `refresh_seconds`, default **120s**.
-
----
-
 ## For Developers
 
 ## 1. Prerequisites (one-time)
@@ -228,6 +209,25 @@ Yahoo is HTTPS. By default the app **skips certificate verification** (fine for
 read-only public quotes). To verify properly, drop a CA bundle at `romfs/cacert.pem`
 (e.g. from https://curl.se/ca/cacert.pem) and rebuild — the app auto-detects it and
 enables verification.
+
+---
+
+## API keys, security & quota
+
+**Provide own API Keys** The Trading Economics key is read at
+runtime from `sdmc:/te_apikey.txt` on each user's own SD card - it is never compiled
+into the `.nro`. Every user brings
+their **own** key; TE keys are per-account and must not be shared or embedded. Without a
+key the app simply shows the sample INDOGB curve, so it works for everyone out of the box (we are working on using alternative data sources such as FRED).
+
+**API-quota friendliness (already built in):**
+- Yields (Trading Economics) refresh on a slow timer — `yields_refresh_seconds`,
+  default **900s (15 min)**. Bond yields move slowly; there's no reason to poll faster.
+- All tenors are fetched in **one batched request** (comma-separated symbols), not one
+  call per tenor.
+- The 1-month / 1-year history is **cached ~6 hours**, so a routine refresh costs about
+  **one** API call, not sixteen. Startup costs two (current + history).
+- Overview/stocks (Yahoo, no key) refresh on `refresh_seconds`, default **120s**.
 
 ---
 
