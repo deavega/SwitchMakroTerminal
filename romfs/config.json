@@ -1,0 +1,65 @@
+{
+  "tz_offset_hours": 7,
+  "refresh_seconds": 120,
+  "yields_refresh_seconds": 900,
+  "fonts": {
+    "regular": "romfs:/fonts/main.ttf",
+    "bold": "romfs:/fonts/bold.ttf"
+  },
+  "overview": [
+    { "symbol": "IDR=X", "label": "USD / IDR", "decimals": 2 },
+    { "symbol": "^JKSE", "label": "IHSG \u2022 Jakarta Composite", "decimals": 2 }
+  ],
+  "stocks": [
+    { "symbol": "BBCA.JK", "label": "Bank Central Asia" },
+    { "symbol": "BBRI.JK", "label": "Bank Rakyat Indonesia" },
+    { "symbol": "BMRI.JK", "label": "Bank Mandiri" },
+    { "symbol": "TLKM.JK", "label": "Telkom Indonesia" },
+    { "symbol": "ASII.JK", "label": "Astra International" },
+    { "symbol": "GOTO.JK", "label": "GoTo" },
+    { "symbol": "AMMN.JK", "label": "Amman Mineral" },
+    { "symbol": "UNVR.JK", "label": "Unilever Indonesia" },
+    { "symbol": "ICBP.JK", "label": "Indofood CBP" }
+  ],
+  "yield_sources": [
+    {
+      "name": "Indonesia INDOGB",
+      "provider": "tradingeconomics",
+      "key_file": "sdmc:/te_apikey.txt",
+      "te_country": "indonesia",
+      "te_auto": true,
+      "sample": true,
+      "tenors": [
+        { "label": "1Y",  "years": 1,  "te": "GIDN1Y:GOV" },
+        { "label": "3Y",  "years": 3,  "te": "GIDN3Y:GOV" },
+        { "label": "5Y",  "years": 5,  "te": "GIDN5Y:GOV" },
+        { "label": "7Y",  "years": 7,  "te": "GIDN7Y:GOV" },
+        { "label": "10Y", "years": 10, "te": "GIDN10Y:GOV" },
+        { "label": "15Y", "years": 15, "te": "GIDN15Y:GOV" },
+        { "label": "20Y", "years": 20, "te": "GIDN20Y:GOV" },
+        { "label": "30Y", "years": 30, "te": "GIDN30Y:GOV" }
+      ],
+      "current": [6.05, 6.28, 6.42, 6.55, 6.68, 6.92, 7.05, 7.18],
+      "month":   [6.20, 6.45, 6.60, 6.72, 6.85, 7.05, 7.16, 7.28],
+      "year":    [6.35, 6.55, 6.70, 6.80, 6.62, 6.98, 7.10, 7.22]
+    },
+    {
+      "name": "US Treasury",
+      "provider": "tradingeconomics",
+      "key_file": "sdmc:/te_apikey.txt",
+      "te_country": "united states",
+      "te_auto": true,
+      "sample": true,
+      "tenors": [
+        { "label": "3M",  "years": 0.25 },
+        { "label": "2Y",  "years": 2 },
+        { "label": "5Y",  "years": 5 },
+        { "label": "10Y", "years": 10 },
+        { "label": "30Y", "years": 30 }
+      ],
+      "current": [4.40, 4.05, 4.02, 4.25, 4.55],
+      "month":   [4.48, 4.15, 4.10, 4.32, 4.60],
+      "year":    [5.30, 4.60, 4.35, 4.45, 4.60]
+    }
+  ]
+}

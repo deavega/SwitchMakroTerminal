@@ -1,0 +1,14 @@
+Your Trading Economics API key goes here, on a single line, e.g.:
+
+    client:secret
+
+Then rename/copy this file's CONTENTS (just the key, not this help text) to your
+Switch SD card at:
+
+    sdmc:/te_apikey.txt
+
+Do NOT commit your real key. `te_apikey.txt` is gitignored for that reason.
+Without a key the app falls back to sample INDOGB values automatically.
+
+Get a key at https://developer.tradingeconomics.com/ . Each user must use their
+own key — keys are per-account and must not be shared or embedded in a public build.

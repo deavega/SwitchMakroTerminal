@@ -1,0 +1,17 @@
+Place two TrueType fonts here before building:
+
+  main.ttf   -> regular weight
+  bold.ttf   -> bold weight (optional; falls back to main.ttf if missing)
+
+Any TTF works. Good free choices with the "terminal / dashboard" look:
+  - Inter        (https://github.com/rsms/inter) -> Inter-Regular.ttf / Inter-Bold.ttf
+  - IBM Plex Sans / IBM Plex Mono
+  - JetBrains Mono
+  - Roboto / Roboto Condensed
+
+Example (from the project root, after downloading a TTF):
+  cp ~/Downloads/Inter-Regular.ttf romfs/fonts/main.ttf
+  cp ~/Downloads/Inter-Bold.ttf    romfs/fonts/bold.ttf
+
+The app renders ▲ ▼ • arrows/bullets, so pick a font that includes those
+glyphs (Inter and IBM Plex both do). You can change these paths in config.json.
