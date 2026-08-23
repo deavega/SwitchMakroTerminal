@@ -58,9 +58,9 @@ Data also auto-refreshes every `refresh_seconds` (default 60).
 
 ### Live INDOGB via Trading Economics
 
-The Indonesia curve can run **live** from the Trading Economics API using your
-`GIDN*:GOV` symbols. To enable it, put your API key in a text file named
-`te_apikey.txt` in **either** of these places:
+The Indonesia curve can run **live** from the Trading Economics API using 
+`GIDN*:GOV` symbols. To enable it, **put your own API key** in a text file named
+**`te_apikey.txt`** in **either** of these places:
 
 ```
 <the folder your .nro is in>/te_apikey.txt     (e.g. sdmc:/switch/switch_terminal/te_apikey.txt)
