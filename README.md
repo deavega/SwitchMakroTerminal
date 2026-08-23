@@ -22,7 +22,7 @@ high/low, 52-week high/low, volume, average volume, 1-month change, and annualiz
 volatility. **Left/Right** flips between stocks, **B** goes back, **X** refreshes.
 
 When the detail view opens, the app also fetches **richer valuation metrics** from
-Yahoo's `quoteSummary` endpoint (the same data `yfinance` exposes): **P/E, forward P/E,
+Yahoo's `quoteSummary` endpoint: **P/E, forward P/E,
 EPS, dividend yield, price/book, beta, market cap, mean analyst target, ROE, and profit
 margin**, plus the company's **sector/industry**. It's fetched lazily per stock, so it costs one request the
 first time you open a given stock. If Yahoo declines the crumb, the base stats still show
