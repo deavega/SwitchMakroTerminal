@@ -124,6 +124,15 @@ SwitchMakroTerminal/
 
 ---
 
+## Support Me
+
+<p>Buying me a coffee to support this project and future enhancements...</p>
+<a href="https://ko-fi.com/vegatroz" target="_blank">
+  <img src="https://storage.ko-fi.com/cdn/kofi3.png?v=3" height="48" alt="Buy Me a Coffee at ko-fi.com" />
+</a>
+
+---
+
 ## For Developers
 
 ## 1. Prerequisites (one-time)
